@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title> Practical Scientific Computing in Brain Imaging </title>
+		<title> DIPY: Diffusion MRI in Python </title>
 
-		<meta name="description" content="Guide for the perplexed">
+		<meta name="description" content="Presentation of Dipy, a library for the analysis of diffusion MRI data in Python.">
 		<meta name="author" content="Ariel Rokem">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -43,7 +43,7 @@
 					<h1>Diffusion MRI in Python</h1>
 					<h3>Practical scientific computing for neuroimaging</h3>
 					<p><a href="http://arokem.org">Ariel Rokem</a>, <a href="http://escience.washington.edu">University of Washington eScience Institute</a> </p>
-					<p class="fragment"> Follow along at <t></t></p>
+					<p class="fragment"> Follow along at <t><a href="http://tinyurl.com/ohbm2015-dipy">http://tinyurl.com/ohbm2015-dipy</t></a></p>
 				</section>
 
 <!-- 
@@ -58,15 +58,28 @@ General structure:
 				
 -->
 
-
+				<section>
+					<h2>Diffusion MRI</h2>
+				dMRI measures the micro-movements of water in each voxel
+					   <p class="fragment">=> Microstructural tissue properties</p>
+					   <p class="fragment">=> Distribution of nerve fiber orientations</p>
+					   <p class="fragment">=> Brain connectivity </p>
+				</section>
 
 				<section>
 					<h2>Diffusion MRI</h2>
-					It does a lot!	   
-					   <p class="fragment">One </p>
-					   <p class="fragment">Two </p>
-					   <p class="fragment">Three </p>
+					<video width="600" autoplay loop>
+					  <source src="./ipynb/dMRI-signal-movie.mp4">
+					</video>					
 				</section>
+
+				<section>
+					<h3>From diffusion to tracks</h3>
+						<img src="images/d2t-bkgrnd.png">
+					<p class="fragment">
+							<img src="ipynb/tensor_ellipsoids.png" alt="some_text" style="opacity:0.4;filter:alpha(opacity=40);"/>
+				</section>
+
 
 				<section>
 					<h2>DIPY: Diffusion MRI in Python</h2>
