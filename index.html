@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -39,7 +39,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<img src="images/dipy-logo.png" alt="DIPY logo" align="middle">
+					<img src="images/dipy-logo.png" alt="DIPY logo" align="middle" style="background:none; border:none; box-shadow:none;">
 					<h1>Diffusion MRI in Python</h1>
 					<h3>Practical scientific computing for neuroimaging</h3>
 					<p><a href="http://arokem.org">Ariel Rokem</a>, <a href="http://escience.washington.edu">University of Washington eScience Institute</a> </p>
@@ -75,11 +75,67 @@ General structure:
 
 				<section>
 					<h3>From diffusion to tracks</h3>
-						<img src="images/d2t-bkgrnd.png">
-					<p class="fragment">
-							<img src="ipynb/tensor_ellipsoids.png" alt="some_text" style="opacity:0.4;filter:alpha(opacity=40);"/>
+					<div style="position: absolute; left: 210px;">
+					<img src="ipynb/axial_slice.png" height="505">
+					</div>	
+					
+					<div class = "fragment fade-in" style="position: absolute;">
+						
+					<canvas id="zoom-box" width="1000" height="1000"></canvas>
+					    <script>
+					      var canvas = document.getElementById('zoom-box');
+					      var context = canvas.getContext('2d');
+
+					      context.beginPath(430, 200);
+					      context.moveTo(430, 200);
+					      context.lineTo(430, 250);
+					      context.lineTo(480, 250);
+						  context.lineTo(480, 200);
+						  context.lineTo(430, 200);
+						  
+					      context.lineWidth = 2;
+
+					      // line color
+					      context.strokeStyle = 'white';
+					      context.stroke();
+					    </script>
+					  </div>
 				</section>
 
+				<section>
+					<h3>From diffusion to tracks</h3>
+					<div style="position: absolute;">
+					<img src="ipynb/d2t-bkgrnd.png" style="background:none; border:none; box-shadow:none;" height="505", width="766">
+				</div>
+<div class="fragment" style="position: absolute; left: 91px; top:58px;"><img src="ipynb/tensor_ellipsoids.png" style="background:none; border:none; box-shadow:none; opacity:0.4; filter:alpha(opacity=40);">
+					</div>
+					
+					<div class = "fragment fade-in" style="position: absolute;">
+						
+					<canvas id="fiber" width="1000" height="1000"></canvas>
+					    <script>
+					      var canvas = document.getElementById('fiber');
+					      var context = canvas.getContext('2d');
+
+					      context.beginPath();
+					      context.moveTo(590, 170);
+					      context.bezierCurveTo(400, 300, 365, 80, 378, 65);
+					      context.lineWidth = 10;
+
+					      // line color
+					      context.strokeStyle = 'yellow';
+					      context.stroke();
+					    </script>
+					  </div>
+				</section>
+
+				<section>
+					<h3>From diffusion to tracks</h3>
+					<video width="600" autoplay loop>
+					  <source src="./ipynb/corpuscallosum-sagittal-movie.mp4">
+					</video>					
+					
+				</section>
 
 				<section>
 					<h2>DIPY: Diffusion MRI in Python</h2>
@@ -112,7 +168,6 @@ General structure:
 				<section>
 					<h2> Contributors </h2>
 					   <p class="fragment"> </p>
-					   <p class="fragment"> LiFE </p>
 				</section>
 
 

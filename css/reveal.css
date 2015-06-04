@@ -33,6 +33,7 @@ body {
   background-color: #fff;
   color: #000; }
 
+.reveal section img { background:none; border:none; box-shadow:none; }
 /*********************************************
  * VIEW FRAGMENTS
  *********************************************/
